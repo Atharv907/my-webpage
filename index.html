@@ -4,25 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3D Image Carousel</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/my-webpage/style.css" />
 </head>
 <body>
   <h1>Happy Birthday ❤️</h1>
 
   <div class="carousel">
     <figure id="spinner">
-      <img src="/my-webpage/Sam1.jpeg" alt="Image 1" />
-      <img src="images/Sam2.jpeg" alt="Image 2" />
-      <img src="images/Sam3.jpeg" alt="Image 3" />
-      <img src="images/Sam4.jpeg" alt="Image 4" />
-      <img src="images/Sam5.jpeg" alt="Image 5" />
-      <img src="images/Sam6.jpeg" alt="Image 6" />
-      <img src="images/Sam7.jpeg" alt="Image 7" />
-      <img src="images/Sam8.jpeg" alt="Image 8" />
-      <img src="images/Sam9.jpeg" alt="Image 9" />
-      <img src="images/Sam10.jpeg" alt="Image 10" />
-      <img src="images/Sam11.jpeg" alt="Image 11" />
-      <img src="images/Sam12.jpeg" alt="Image 12" />
+      <img src="/my-webpage/images/Sam1.jpeg" alt="Image 1" />
+      <img src="/my-webpage/images/Sam2.jpeg" alt="Image 2" />
+      <img src="/my-webpage/images/Sam3.jpeg" alt="Image 3" />
+      <img src="/my-webpage/images/Sam4.jpeg" alt="Image 4" />
+      <img src="/my-webpage/images/Sam5.jpeg" alt="Image 5" />
+      <img src="/my-webpage/images/Sam6.jpeg" alt="Image 6" />
+      <img src="/my-webpage/images/Sam7.jpeg" alt="Image 7" />
+      <img src="/my-webpage/images/Sam8.jpeg" alt="Image 8" />
+      <img src="/my-webpage/images/Sam9.jpeg" alt="Image 9" />
+      <img src="/my-webpage/images/Sam10.jpeg" alt="Image 10" />
+      <img src="/my-webpage/images/Sam11.jpeg" alt="Image 11" />
+      <img src="/my-webpage/images/Sam12.jpeg" alt="Image 12" />
     </figure>
   </div>
 
@@ -33,13 +33,11 @@
 
   <div class="hearts-container"></div>
 
-  
   <audio id="bgMusic" loop>
-    <source src="what-makes-you-beautiful.mp3" type="audio/mpeg" />
+    <source src="/my-webpage/what-makes-you-beautiful.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
- 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const music = document.getElementById('bgMusic');
@@ -51,7 +49,6 @@
           console.warn("Autoplay blocked, waiting for interaction.");
         });
 
-        // Remove the listener after first interaction
         document.removeEventListener('click', tryPlayMusic);
       }
 
@@ -59,6 +56,6 @@
     });
   </script>
 
-  <script src="script.js"></script>
+  <script src="/my-webpage/script.js"></script>
 </body>
 </html>
