@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Image Carousel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Happy Birthday ❤️</h1>
+
+  <div class="carousel">
+    <figure id="spinner">
+      <img src="images/Sam1.jpeg" alt="Image 1" />
+      <img src="images/Sam2.jpeg" alt="Image 2" />
+      <img src="images/Sam3.jpeg" alt="Image 3" />
+      <img src="images/Sam4.jpeg" alt="Image 4" />
+      <img src="images/Sam5.jpeg" alt="Image 5" />
+      <img src="images/Sam6.jpeg" alt="Image 6" />
+      <img src="images/Sam7.jpeg" alt="Image 7" />
+      <img src="images/Sam8.jpeg" alt="Image 8" />
+      <img src="images/Sam9.jpeg" alt="Image 9" />
+      <img src="images/Sam10.jpeg" alt="Image 10" />
+      <img src="images/Sam11.jpeg" alt="Image 11" />
+      <img src="images/Sam12.jpeg" alt="Image 12" />
+    </figure>
+  </div>
+
+  <div class="buttons">
+    <button onclick="rotateCarousel('prev')">⟨</button>
+    <button onclick="rotateCarousel('next')">⟩</button>
+  </div>
+
+  <div class="hearts-container"></div>
+
+  
+  <audio id="bgMusic" loop>
+    <source src="what-makes-you-beautiful.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const music = document.getElementById('bgMusic');
+
+      function tryPlayMusic() {
+        music.play().then(() => {
+          console.log("Music started automatically.");
+        }).catch(err => {
+          console.warn("Autoplay blocked, waiting for interaction.");
+        });
+
+        // Remove the listener after first interaction
+        document.removeEventListener('click', tryPlayMusic);
+      }
+
+      document.addEventListener('click', tryPlayMusic);
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
